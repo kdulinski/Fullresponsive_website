@@ -24,26 +24,6 @@ header .logo{
     text-shadow: 2px 2px 2px #ccc;
     display: inline;
 }
-header .social-icons {
-    list-style-type: none;
-    display: inline;
-    float: right;
-    margin-right: 19px;
-}
-header .social-icons li {
-    display: inline-block;
-    padding: 0 10px;
-    margin: 8px 0;
-    font-size: 20px;
-}
-header .social-icons li a {
-    color: rgb(18, 109, 109);
-    transition: all 0.4s linear;
-}
-header .social-icons li a:hover {
-    color: #333;
-}
-
 
 /* Navbar --------------------------------*/
 nav {
@@ -280,8 +260,26 @@ main {
 
 /* Footer --------------------------------*/
 footer {
-    height: 25vh;
+    height: 10vh;
     width: 100%;
     background-color: darkslategray;
-
+}
+footer .social-icons li {
+    display: inline-block;
+    padding: 0 10px;
+    margin: 20px 0;
+    font-size: 20px;
+}
+footer .social-icons {
+    list-style-type: none;
+    display: inline;
+    float: right;
+    margin-right: 19px;
+}
+footer .social-icons li a {
+    color: rgb(240, 250, 255);
+    transition: all 0.4s linear;
+}
+footer .social-icons li a:hover {
+    color: rgb(123, 175, 175);
 }
