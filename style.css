@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    line-height: 130%;
+    color: darkslategray;
+    background-color: rgb(240, 250, 255);
+}
+
+header {
+    background-color: rgb(240, 250, 255);
+    color: darkslategray;
+    width: 100%;
+    padding: 15px 0;
+}
+header .logo{
+    font-size: 32px;
+    margin-left: 25px;
+    text-shadow: 2px 2px 2px #ccc;
+    display: inline;
+}
+header .social-icons {
+    list-style-type: none;
+    display: inline;
+    float: right;
+    margin-right: 19px;
+}
+header .social-icons li {
+    display: inline-block;
+    padding: 0 10px;
+    margin: 8px 0;
+    font-size: 20px;
+}
+header .social-icons li a {
+    color: rgb(18, 109, 109);
+    transition: all 0.4s linear;
+}
+header .social-icons li a:hover {
+    color: #333;
+}
+
+
+/* Navbar --------------------------------*/
+nav {
+    background-color: darkslategray;
+    box-shadow: 0 10px 50px 10px rgba(0, 0, 0, 0.2);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    height: auto;
+}
+nav li {
+    float: left;
+}
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 13px 25px;
+    text-decoration: none;
+    transition: all 0.4s linear;
+}
+nav li a:hover:not(.active) {
+    background-color: #333;
+}
+nav li a.active {
+    background-color: rgb(18, 109, 109);
+}
+.nav-toggle {
+    cursor: pointer;
+    display: none;
+    color: rgb(18, 109, 109);
+    font-size: 24px;
+    background: transparent;
+    border-color: transparent;
+    float: right;
+    transition: all 0.4s;
+    margin-right: 25px;
+}
+.nav-toggle:hover {
+    color: #333;
+}
+
+/* Navbar - Dropdown --------------------------------*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(47, 79, 79, 0.8);
+    z-index: 1;
+}
+.dropdown-content a {
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #333;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropbtn-mobile {
+    display: none;
+    margin: 0 15px;
+    background-color: #000;
+}
+
+
+/* Slider --------------------------------*/
+.slider {
+    height: 30vh;
+    width: 100%;
+    background-image: url('./img/slider-2.jpg');
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+}
+
+main {
+    display: flex;
+}
+
+.left-container {
+    flex: 25%;
+    background-color: rgba(47, 79, 79, 0.05);
+}
+
+.main-container {
+    flex: 75%;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+}
+
+.news-item {
+    padding: 0 25px;
+}
+
+.main-container .news-item {
+    flex: 33%;
+    max-width: 33%;
+}
+
+.news-item h1 {
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid rgb(18, 109, 109);
+    color: rgb(18, 109, 109);
+}
+
+.news-item p {
+    margin-bottom: 10px;
+}
+
+.news-item img{
+    height: 150px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.read-more {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    color: rgb(18, 109, 109);
+}
+.read-more:hover {
+    /* color: darkslategray; */
+    color: rgb(18, 109, 109);
+    transition: all 0.2s linear;
+}
+
+@media (max-width: 1000px) {
+    .left-container {
+        flex: 33%;
+    }
+    .main-container {
+        flex: 66%;
+    }
+    .main-container .news-item {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+@media (max-width: 800px) {
+    .left-container {
+        flex: 50%;
+    }
+    .main-container {
+        flex: 50%;
+    }
+    .main-container .news-item {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    main {
+        flex-flow: column;
+    }
+    .left-container {
+        flex: 100%;
+    }
+    .main-container {
+        flex: 100%;
+    }
+    .slider {
+        height: 235px;
+    }
+    nav {
+        position: absolute;
+        width: 100%;
+        top: 55px
+    }
+    nav ul {
+        padding: 0;
+        height: 0;
+        transition: all 0.3s linear;
+    }
+    nav li {
+        float: none;
+    }
+    main .news-item {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .nav-toggle {
+        display: inline;
+    }
+    .show-links {
+        height: 235px;
+    }
+    header .social-icons {
+        display: none;
+    }
+    header .logo{
+        font-size: 28px;
+    }
+
+    /* Navbar - Dropdown --------------------------------*/
+    .dropdown-content {
+        display: none;
+        position:static;
+        background-color: rgb(61, 94, 94);
+    }
+
+    .dropdown-content a {
+        text-align: center;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #333;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        position: absolute;
+        width: 50%;
+        left: 25%;
+    }
+    /* .dropbtn-mobile {
+        display: inline;
+        color:  rgb(18, 109, 109)
+    } */
+}
+
+.section-center {
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Footer --------------------------------*/
+footer {
+    height: 25vh;
+    width: 100%;
+    background-color: darkslategray;
+
+}
