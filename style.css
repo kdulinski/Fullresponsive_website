@@ -12,17 +12,20 @@ body {
     background-color: rgb(240, 250, 255);
 }
 
-header {
+header .section-center{
     background-color: rgb(240, 250, 255);
     color: darkslategray;
     width: 100%;
     padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 header .logo{
     font-size: 32px;
     margin-left: 25px;
     text-shadow: 2px 2px 2px #ccc;
-    display: inline;
+    display: inline-block;
 }
 
 /* Navbar --------------------------------*/
@@ -63,7 +66,6 @@ nav li a.active {
     font-size: 24px;
     background: transparent;
     border-color: transparent;
-    float: right;
     transition: all 0.4s;
     margin-right: 25px;
 }
@@ -199,7 +201,7 @@ main {
     nav {
         position: absolute;
         width: 100%;
-        top: 55px
+        top: 60px;
     }
     nav ul {
         padding: 0;
@@ -214,13 +216,10 @@ main {
         max-width: 100%;
     }
     .nav-toggle {
-        display: inline;
+        display: inline-block;
     }
     .show-links {
         height: 235px;
-    }
-    header .social-icons {
-        display: none;
     }
     header .logo{
         font-size: 28px;
@@ -263,17 +262,19 @@ footer {
     height: 10vh;
     width: 100%;
     background-color: darkslategray;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 footer .social-icons li {
-    display: inline-block;
     padding: 0 10px;
-    margin: 20px 0;
+    margin: 0;
     font-size: 20px;
 }
 footer .social-icons {
     list-style-type: none;
-    display: inline;
-    float: right;
+    display: flex;
+    flex-direction: row;
     margin-right: 19px;
 }
 footer .social-icons li a {
